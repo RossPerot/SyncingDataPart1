@@ -6,9 +6,9 @@ var app = require('http').createServer(handler);
 var io = require('socket.io')(app);
 //grab our file system 
 var fs = require('fs');
-
+var PORT = process.env.PORT || process.env.NODE_PORT || 3000;
 //tell server to listen on the port
-app.listen(3000);
+app.listen(PORT);
 
 //Overall object to show maintained by the server
 /**Clients will have their own local objects, but the one on the server will be 
